@@ -59,5 +59,20 @@ private:
 };
 
 int main() {
+    // TreeNode *Tree = new TreeNode(7); //root node;
+    // Tree->left = new TreeNode(3);
+    // Tree->right = new TreeNode(8);
+    // Tree->left->left = new TreeNode(2);
+    // Tree->left->right = new TreeNode(4);
+    // Tree->right->left = new TreeNode(6);
+    // Tree->right->right = new TreeNode(12);
+
+    // delete Tree->right->right;
+    // delete Tree->right->left;
+    // delete Tree->left->right;
+    // delete Tree->left->left;
+    // delete Tree->right;
+    // delete Tree->left;
+    // delete Tree;
     return 0;
 }
