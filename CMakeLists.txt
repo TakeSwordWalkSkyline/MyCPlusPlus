@@ -6,4 +6,4 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_subdirectory(comprehensive)
-#add_subdirectory(sorting)
+add_subdirectory(sorting)
