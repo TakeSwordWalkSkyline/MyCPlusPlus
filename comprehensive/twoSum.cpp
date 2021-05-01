@@ -13,10 +13,9 @@ struct two_num_st {
     int position2;
 };
 
-two_num_st twoSum(int *numbers, int target) {
-    int len = sizeof(numbers) / sizeof(int);
+two_num_st twoSum(int *numbers, int target, int arraySize) {
     int left = 0;
-    int right = len - 1;
+    int right = arraySize - 1;
     while (left < right) {
         int sum = numbers[left] + numbers[right];
         if (sum == target) break;
@@ -48,7 +47,8 @@ two_num_st twoSum(int *numbers, int target) {
 
 int main() {
     int numbers[4] = {2, 7, 11, 15};
-    two_num_st result = twoSum(numbers, 9);
+    int len = sizeof(numbers) / sizeof(int);
+    two_num_st result = twoSum(numbers, 9, len);
     // vector<int> numbers{2, 7, 11, 15};
     // vector<int> res = twoSum(numbers, 9); 
     printf("first num position is:%d, second num position is:%d\n", result.position1, result.position2);
