@@ -1,0 +1,8 @@
+python
+import sys
+sys.path.insert(0, '/home/wangxin/.config/gdb/python') #path of python
+from libstdcxx.v6.printers import register_libstdcxx_printers
+register_libstdcxx_printers (None)
+end
+
+set history save on
