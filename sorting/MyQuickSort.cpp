@@ -1,15 +1,17 @@
-#include <stdlib.h>
 #include <iostream>
+#include <stdlib.h>
 
 int partition(int *a, int low, int high) {
     int pivot = a[low]; //基准数
     int i = low;
     int j = high;
     // int pos = 0;
-    while(i < j) {
+    while (i < j) {
         //下面这种实现方式移动i和j的指针,由于两个while都有进行判断,最终i和j一定会相等,不会出现i>j的情况
-        while (i < j && a[j] >= pivot) j--; // 如果找到比pivot小的数则跳出循环,此时j的位置确定
-        while (i < j && a[i] <= pivot) i++; //如果找到比pivot大的数则跳出循环,此时i的位置确定
+        while (i < j && a[j] >= pivot)
+            j--; // 如果找到比pivot小的数则跳出循环,此时j的位置确定
+        while (i < j && a[i] <= pivot)
+            i++; //如果找到比pivot大的数则跳出循环,此时i的位置确定
         int temp = a[i];
         a[i] = a[j];
         a[j] = temp;
@@ -28,15 +30,15 @@ int partition(int *a, int low, int high) {
 
 void quickSort(int *a, int low, int high) {
     if (low > high) {
-        return ;
+        return;
     }
     int p = partition(a, low, high);
     quickSort(a, low, p - 1);
     quickSort(a, p + 1, high);
-    return ;
+    return;
 }
 
-int main () {
+int main() {
     int size;
     std::cout << "\nEnter the number of elements : ";
 
