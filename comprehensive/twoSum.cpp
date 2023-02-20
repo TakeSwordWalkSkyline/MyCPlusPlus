@@ -20,14 +20,16 @@ two_num_st twoSum(int *numbers, int target, int arraySize) {
         int sum = numbers[left] + numbers[right];
         if (sum == target) break;
         if (sum < target) {
-            right --;
-        } else {
             left ++;
+        } else {
+            right --;
         }
     }
     two_num_st result;
-    result.position1 = numbers[left];
-    result.position2 = numbers[right];
+    // result.position1 = numbers[left];
+    // result.position2 = numbers[right];
+    result.position1 = left + 1;
+    result.position2 = right + 1;
     return result;
 }
 
